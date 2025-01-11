@@ -268,24 +268,16 @@ public class Index extends JFrame {
 		btnNumber0.setBounds(10, 277, 271, 52);
 		panel_1.add(btnNumber0);
 		
-		JButton btnNewButton_1_2_3_1 = new JButton("Del");
-		btnNewButton_1_2_3_1.addActionListener(new ActionListener() {
+		JButton btnDel = new JButton("Del");
+		btnDel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String del = lblResultado.getText();
-				List<Character> newResultList = new ArrayList<>(); 
-				for (int i = 0; i < del.length(); i++) {
-					newResultList.add(del.charAt(i));
-				}
-				StringBuilder newDelBuilder = null;
-				newDelBuilder.append(newResultList);
-				lblResultado.setText(newDelBuilder.toString());
-				
+				deleteLastNumber();
 			}
 		});
-		btnNewButton_1_2_3_1.setBackground(new Color(255, 255, 255));
-		btnNewButton_1_2_3_1.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		btnNewButton_1_2_3_1.setBounds(105, 10, 83, 71);
-		panel_1.add(btnNewButton_1_2_3_1);
+		btnDel.setBackground(new Color(255, 255, 255));
+		btnDel.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		btnDel.setBounds(105, 10, 83, 71);
+		panel_1.add(btnDel);
 		
 		JButton btnClear = new JButton("C");
 		btnClear.setBackground(new Color(255, 255, 255));
@@ -308,6 +300,16 @@ public class Index extends JFrame {
 		}else {
 			lblMaxNumSize.setText("Numero maximo atingido Apage ou clique em um operador");
 		}
+	}
+	
+	private void deleteLastNumber() {
+		String del = lblResultado.getText();
+		String newDel = "";
+		for (int i = 0; i < del.length() - 1; i++) {
+			newDel = newDel + del.charAt(i);
+		}
+		lblResultado.setText(newDel);
+		
 	}
 	
 }
