@@ -24,7 +24,3 @@ A calculadora desenvolvida realiza todas as operações básicas de matemática,
 
 ## Conclusão
 Este projeto foi um excelente exercício para aplicar os conceitos de orientação a objetos e desenvolver uma interface gráfica com Java Swing. A calculadora é eficiente, fácil de usar e oferece uma experiência agradável ao usuário.
-
----
-
-Espero que isso ajude! Se precisar de mais alguma coisa, estarei por aqui. 😊
