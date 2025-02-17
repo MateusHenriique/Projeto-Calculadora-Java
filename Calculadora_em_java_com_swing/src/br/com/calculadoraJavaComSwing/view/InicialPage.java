@@ -1,4 +1,4 @@
-package br.com.calculadoraJavaComSwing;
+package br.com.calculadoraJavaComSwing.view;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -16,7 +16,9 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class Index extends JFrame {
+import br.com.calculadoraJavaComSwing.Model.Calculate;
+
+public class InicialPage extends JFrame {
 
 	private String operation;
 	private JLabel lblResultado;
@@ -33,7 +35,7 @@ public class Index extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Index frame = new Index();
+					InicialPage frame = new InicialPage();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -45,7 +47,7 @@ public class Index extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Index() {
+	public InicialPage() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 400, 500);
 		contentPane = new JPanel();

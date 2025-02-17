@@ -1,4 +1,4 @@
-package br.com.calculadoraJavaComSwing;
+package br.com.calculadoraJavaComSwing.Model;
 
 public class Calculate {
 	
